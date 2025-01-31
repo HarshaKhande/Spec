@@ -11,7 +11,7 @@ namespace AppiumSpecFlowProject1.TestSuite
 {
 
     [TestFixture]
-    public class TestCase1 : TestInitialize
+    public class TestCase1 : TestInitializeUnit
     {
 
 

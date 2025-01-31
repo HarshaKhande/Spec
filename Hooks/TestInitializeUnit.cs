@@ -1,40 +1,31 @@
 ﻿using AppiumSpecFlowProject1.Utilities;
+using NUnit.Framework;
+using OpenQA.Selenium.Appium.Android;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AppiumSpecFlowProject1.Hooks
 {
-
-    [Binding]
-    public partial class TestInitialize : Base
+    [TestFixture]
+    public  class TestInitializeUnit : Base
     {
-        [BeforeScenario]
+
+
+        [SetUp]
         public void TestInitializeTest()
         {
-
-
-
             AndroidContext = StartAppiumServerForHybdrid();
-
-            ScenarioContext.Current["androidContext"] = AndroidContext;
 
         }
 
-
-        [AfterScenario]
+        [TearDown]
         public void CleanUp()
         {
 
             AppiumUtilities.CloseAppiumServer();
-
-
         }
-
-
     }
 }

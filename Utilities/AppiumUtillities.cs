@@ -112,6 +112,7 @@ namespace AppiumSpecFlowProject1.Utilities
         public void CloseAppiumServer()
         {
             _appiumLocalService.Dispose();
+           // _androidDriver.Close();
 
         }
 
